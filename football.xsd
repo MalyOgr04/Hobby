@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Deklaracje typów prostych -->
+    <xs:simpleType name="string50">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="50"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="yearType">
+        <xs:restriction base="xs:gYear">
+            <xs:minInclusive value="1800"/>
+            <xs:maxInclusive value="2100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="attendanceType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1000"/>
+            <xs:maxInclusive value="100000"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="importanceType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="high"/>
+            <xs:enumeration value="medium"/>
+            <xs:enumeration value="low"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="urlType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="https?://.+|images/.+\.(jpg|png|jpeg)"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Deklaracje typów złożonych -->
+    <xs:complexType name="gameType">
+        <xs:sequence>
+            <xs:element name="description" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="string50" use="required"/>
+        <xs:attribute name="country" type="string50" use="required"/>
+        <xs:attribute name="era" type="string50" use="optional"/>
+    </xs:complexType>
+
+    <xs:complexType name="eventType">
+        <xs:sequence>
+            <xs:element name="description" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="year" type="yearType" use="required"/>
+        <xs:attribute name="place" type="string50" use="required"/>
+        <xs:attribute name="importance" type="importanceType" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="leagueType">
+        <xs:sequence>
+            <xs:element name="averageAttendance" type="attendanceType"/>
+            <xs:element name="link" type="urlType"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="string50" use="required"/>
+        <xs:attribute name="country" type="string50" use="required"/>
+        <xs:attribute name="teams" type="xs:integer" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="imageType">
+        <xs:sequence>
+            <xs:element name="description" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="string50" use="required"/>
+        <xs:attribute name="url" type="urlType" use="required"/>
+    </xs:complexType>
+
+    <!-- Typ złożony dla elementu "period" -->
+    <xs:complexType name="periodType">
+        <xs:sequence>
+            <xs:choice maxOccurs="unbounded">
+                <xs:element name="game" type="gameType"/>
+                <xs:element name="event" type="eventType"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="name" type="string50" use="required"/>
+        <xs:attribute name="description" type="string50" use="optional"/>
+    </xs:complexType>
+
+    <xs:complexType name="galleryType">
+        <xs:sequence>
+            <xs:element name="image" type="imageType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Element główny -->
+    <xs:element name="football">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="history">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="period" type="periodType" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="leagues">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="league" type="leagueType" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="gallery" type="galleryType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

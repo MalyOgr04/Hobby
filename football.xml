@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<football xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="football.xsd">
+    <history>
+        <period name="ancient" description="Starożytne początki piłki nożnej">
+            <game name="cuju" country="China" era="Ancient">
+                <description>Chińska gra cuju była formą treningu wojskowego polegającą na kopaniu piłki do bramki.</description>
+            </game>
+            <game name="kemari" country="Japan" era="Ancient">
+                <description>Japońska gra ceremonialna, której celem było utrzymanie piłki w powietrzu.</description>
+            </game>
+        </period>
+        <period name="modern" description="Narodziny nowoczesnej piłki nożnej">
+            <event year="1863" place="England" importance="high">
+                <description>Założenie Football Association i ustandaryzowanie zasad gry.</description>
+            </event>
+            <event year="1904" place="Paris" importance="medium">
+                <description>Powstanie FIFA, organizacji zarządzającej piłką nożną.</description>
+            </event>
+        </period>
+    </history>
+    <leagues>
+        <league name="Premier League" country="England" teams="20">
+            <averageAttendance>39000</averageAttendance>
+            <link>https://www.flashscore.pl/pilka-nozna/anglia/premier-league/tabela/#/lAkHuyP3/table/overall</link>
+        </league>
+        <league name="La Liga" country="Spain" teams="20">
+            <averageAttendance>28000</averageAttendance>
+            <link>https://www.flashscore.pl/pilka-nozna/hiszpania/laliga/tabela/#/dINOZk9Q/table/overall</link>
+        </league>
+        <league name="Bundesliga" country="Germany" teams="18">
+            <averageAttendance>42000</averageAttendance>
+            <link>https://www.flashscore.pl/pilka-nozna/niemcy/bundesliga/#/8l1ZdrsC/table/overall</link>
+        </league>
+        <league name="Serie A" country="Italy" teams="20">
+            <averageAttendance>24000</averageAttendance>
+            <link>https://www.flashscore.pl/pilka-nozna/wlochy/serie-a/#/zDpS37lb/table/overall</link>
+        </league>
+        <league name="Ligue 1" country="France" teams="18">
+            <averageAttendance>22000</averageAttendance>
+            <link>https://www.flashscore.pl/pilka-nozna/francja/ligue-1/#/WYO1P5ch/table/overall</link>
+        </league>
+        <league name="PKO BP Ekstraklasa" country="Poland" teams="18">
+            <averageAttendance>4456</averageAttendance>
+            <link>https://www.flashscore.pl/pilka-nozna/polska/pko-bp-ekstraklasa/#/Qu6CIhxL/live</link>
+        </league>
+    </leagues>
+    <gallery>
+        <image name="Nazario" url="images/nazario.jpg">
+            <description>Zdjęcie legendy piłkarskiej Nazario</description>
+        </image>
+        <image name="Lewandowski" url="images/lewandowski.jpg">
+            <description>Zdjęcie Roberta Lewandowskiego</description>
+        </image>
+        <image name="Messi" url="images/messi.jpg">
+            <description>Zdjęcie Lionela Messiego</description>
+        </image>
+        <image name="Ronaldo" url="images/ronaldo.jpg">
+            <description>Zdjęcie Cristiano Ronaldo</description>
+        </image>
+        <image name="Maradona" url="images/maradona.jpg">
+            <description>Zdjęcie Diego Maradony</description>
+        </image>
+        <image name="Cruyff" url="images/cruyff.jpg">
+            <description>Zdjęcie Johana Cruyffa</description>
+        </image>
+        <image name="Neymar" url="images/neymar.jpg">
+            <description>Zdjęcie Neymara</description>
+        </image>
+        <image name="Bellingham" url="images/bellingham.jpg">
+            <description>Zdjęcie Jude'a Bellinghama</description>
+        </image>
+        <image name="Pele" url="images/pele.jpg">
+            <description>Zdjęcie Pele</description>
+        </image>
+    </gallery>
+</football>
+
+315932

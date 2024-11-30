@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podziel się opinią o piłce nożnej</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Historia Piłki Nożnej</h1>
+        <nav>
+    <ul>
+        <li><a href="index.html">Historia</a></li>
+        <li><a href="#Leagues">Ligi Piłkarskie</a>
+            <ul class="submenu">
+                <li><a href="europe.html">Europejskie Ligi</a></li>
+                <li><a href="poland.html">Liga Polska</a></li>
+            </ul>
+        </li>
+        <li><a href="opinion.html" class="active">Podziel się opinią</a></li>
+    </ul>
+</nav>
+    </header>
+
+    <main>
+        <section id="survey">
+            <h2>Ankieta o Piłce Nożnej</h2>
+            <form action="#" method="post">
+                <!-- Pole tekstowe -->
+                <label for="name">Twoje imię:</label>
+                <input type="text" id="name" name="name" placeholder="Wpisz swoje imię" required>
+
+                <!-- Pole e-mail -->
+                <label for="email">Twój e-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Wpisz swój e-mail" required>
+
+                <!-- Lista rozwijana -->
+                <label for="favorite-league">Ulubiona liga piłkarska:</label>
+                <select id="favorite-league" name="favorite-league" required>
+                    <option value="" disabled selected>Wybierz...</option>
+                    <option value="premier-league">Premier League</option>
+                    <option value="la-liga">La Liga</option>
+                    <option value="bundesliga">Bundesliga</option>
+                    <option value="serie-a">Serie A</option>
+                    <option value="ligue-1">Ligue 1</option>
+                </select>
+
+                <!-- Radio button -->
+                <p>Jak często oglądasz mecze piłkarskie?</p>
+                <div class="radio-group">
+                    <input type="radio" id="daily" name="watch-frequency" value="daily" required>
+                    <label for="daily">Codziennie</label>
+
+                    <input type="radio" id="weekly" name="watch-frequency" value="weekly">
+                    <label for="weekly">Raz w tygodniu</label>
+
+                    <input type="radio" id="rarely" name="watch-frequency" value="rarely">
+                    <label for="rarely">Rzadko</label>
+                </div>
+
+                <!-- Checkbox -->
+                <p>Jakie elementy piłki nożnej lubisz najbardziej? (zaznacz wszystkie, które pasują):</p>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="goals" name="favorite-elements" value="goals">
+                    <label for="goals">Bramki</label>
+
+                    <input type="checkbox" id="skills" name="favorite-elements" value="skills">
+                    <label for="skills">Umiejętności zawodników</label>
+
+                    <input type="checkbox" id="strategy" name="favorite-elements" value="strategy">
+                    <label for="strategy">Taktyka</label>
+                </div>
+
+                <!-- Pole tekstowe wielowierszowe -->
+                <label for="comments">Twoje uwagi lub opinia:</label>
+                <textarea id="comments" name="comments" rows="5" placeholder="Podziel się swoją opinią..."></textarea>
+
+                <!-- Przycisk wysyłania i czyszczenia -->
+                <div class="button-group">
+                    <button type="submit" class="button">Wyślij</button>
+                    <button type="reset" class="button">Wyczyść</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Kacper Kaczówka 203612</p>
+    </footer>
+</body>
+</html>

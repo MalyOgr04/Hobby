@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE football SYSTEM "football.dtd">
+<football>
+    <history>
+        <period name="ancient" description="Starożytne początki piłki nożnej">
+            <game name="cuju" country="China" era="Ancient">
+                <description>Chińska gra cuju była formą treningu wojskowego polegającą na kopaniu piłki do bramki.</description>
+            </game>
+            <game name="kemari" country="Japan" era="Ancient">
+                <description>Japońska gra ceremonialna, której celem było utrzymanie piłki w powietrzu.</description>
+            </game>
+        </period>
+        <period name="modern" description="Narodziny nowoczesnej piłki nożnej">
+            <event year="1863" place="England" importance="high">
+                <description>Założenie Football Association i ustandaryzowanie zasad gry.</description>
+            </event>
+            <event year="1904" place="Paris" importance="medium">
+                <description>Powstanie FIFA, organizacji zarządzającej piłką nożną.</description>
+            </event>
+        </period>
+    </history>
+    <leagues>
+        <league name="Premier League" country="England" teams="20">
+            <averageAttendance>39000</averageAttendance>
+            <link>https://www.flashscore.pl/pilka-nozna/anglia/premier-league/tabela/#/lAkHuyP3/table/overall</link>
+        </league>
+        <league name="La Liga" country="Spain" teams="20">
+            <averageAttendance>28000</averageAttendance>
+            <link>https://www.flashscore.pl/pilka-nozna/hiszpania/laliga/tabela/#/dINOZk9Q/table/overall</link>
+        </league>
+        <league name="Bundesliga" country="Germany" teams="18">
+            <averageAttendance>42000</averageAttendance>
+            <link>https://www.flashscore.pl/pilka-nozna/niemcy/bundesliga/#/8l1ZdrsC/table/overall</link>
+        </league>
+    </leagues>
+    <gallery>
+        <image name="Nazario" url="images/nazario.jpg">
+            <description>Zdjęcie legendy piłkarskiej Nazario</description>
+        </image>
+        <image name="Lewandowski" url="images/lewandowski.jpg">
+            <description>Zdjęcie Roberta Lewandowskiego</description>
+        </image>
+        <image name="Messi" url="images/messi.jpg">
+            <description>Zdjęcie Lionela Messiego</description>
+        </image>
+    </gallery>
+</football>

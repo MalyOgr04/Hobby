@@ -1,0 +1,35 @@
+<!ENTITY % description "description (#PCDATA)">
+<!ENTITY % link "link (#PCDATA)">
+
+<!ELEMENT football (history, leagues, gallery)>
+<!ELEMENT history (period+)>
+<!ELEMENT period (game*, event*)>
+<!ELEMENT game (%description;)>
+<!ELEMENT event (%description;)>
+<!ELEMENT leagues (league+)>
+<!ELEMENT league (averageAttendance, %link;)>
+<!ELEMENT gallery (image+)>
+<!ELEMENT image (%description;)>
+
+<!ATTLIST period
+    name CDATA #REQUIRED
+    description CDATA #IMPLIED>
+
+<!ATTLIST game
+    name CDATA #REQUIRED
+    country CDATA #REQUIRED
+    era CDATA #IMPLIED>
+
+<!ATTLIST event
+    year CDATA #REQUIRED
+    place CDATA #REQUIRED
+    importance (high | medium | low) #REQUIRED>
+
+<!ATTLIST league
+    name CDATA #REQUIRED
+    country CDATA #REQUIRED
+    teams CDATA #REQUIRED>
+
+<!ATTLIST image
+    name CDATA #REQUIRED
+    url CDATA #REQUIRED>
